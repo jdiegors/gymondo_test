@@ -16,6 +16,11 @@
 		EA419DFB2ABA3D6600A27217 /* GymondoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419DFA2ABA3D6600A27217 /* GymondoTests.swift */; };
 		EA419E052ABA3D6600A27217 /* GymondoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E042ABA3D6600A27217 /* GymondoUITests.swift */; };
 		EA419E072ABA3D6600A27217 /* GymondoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E062ABA3D6600A27217 /* GymondoUITestsLaunchTests.swift */; };
+		EA419E162ABA3DCD00A27217 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E152ABA3DCD00A27217 /* NetworkClient.swift */; };
+		EA419E182ABA3E5E00A27217 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E172ABA3E5E00A27217 /* NetworkProvider.swift */; };
+		EA419E1A2ABA405400A27217 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E192ABA405400A27217 /* NetworkUtils.swift */; };
+		EA419E1E2ABA414B00A27217 /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E1D2ABA414B00A27217 /* MockNetworkClient.swift */; };
+		EA419E222ABA42F900A27217 /* WgerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E212ABA42F900A27217 /* WgerRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,12 @@
 		EA419E002ABA3D6600A27217 /* GymondoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymondoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA419E042ABA3D6600A27217 /* GymondoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymondoUITests.swift; sourceTree = "<group>"; };
 		EA419E062ABA3D6600A27217 /* GymondoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymondoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EA419E152ABA3DCD00A27217 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		EA419E172ABA3E5E00A27217 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		EA419E192ABA405400A27217 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		EA419E1D2ABA414B00A27217 /* MockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
+		EA419E212ABA42F900A27217 /* WgerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WgerRouter.swift; sourceTree = "<group>"; };
+		EA419E242ABA46CC00A27217 /* exercise.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = exercise.geojson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +110,8 @@
 		EA419DE22ABA3D6400A27217 /* Gymondo */ = {
 			isa = PBXGroup;
 			children = (
+				EA419E1F2ABA42D300A27217 /* Shared */,
+				EA419E132ABA3DA100A27217 /* CommonShared */,
 				EA419DE32ABA3D6400A27217 /* AppDelegate.swift */,
 				EA419DE52ABA3D6400A27217 /* SceneDelegate.swift */,
 				EA419DE72ABA3D6400A27217 /* ViewController.swift */,
@@ -113,6 +126,8 @@
 		EA419DF92ABA3D6600A27217 /* GymondoTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA419E1B2ABA413300A27217 /* CommonShared */,
+				EA419E232ABA466D00A27217 /* MockData */,
 				EA419DFA2ABA3D6600A27217 /* GymondoTests.swift */,
 			);
 			path = GymondoTests;
@@ -125,6 +140,64 @@
 				EA419E062ABA3D6600A27217 /* GymondoUITestsLaunchTests.swift */,
 			);
 			path = GymondoUITests;
+			sourceTree = "<group>";
+		};
+		EA419E132ABA3DA100A27217 /* CommonShared */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E142ABA3DAA00A27217 /* Networking */,
+			);
+			path = CommonShared;
+			sourceTree = "<group>";
+		};
+		EA419E142ABA3DAA00A27217 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E152ABA3DCD00A27217 /* NetworkClient.swift */,
+				EA419E172ABA3E5E00A27217 /* NetworkProvider.swift */,
+				EA419E192ABA405400A27217 /* NetworkUtils.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EA419E1B2ABA413300A27217 /* CommonShared */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E1C2ABA413C00A27217 /* Networking */,
+			);
+			path = CommonShared;
+			sourceTree = "<group>";
+		};
+		EA419E1C2ABA413C00A27217 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E1D2ABA414B00A27217 /* MockNetworkClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EA419E1F2ABA42D300A27217 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E202ABA42EB00A27217 /* Networking */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EA419E202ABA42EB00A27217 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E212ABA42F900A27217 /* WgerRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EA419E232ABA466D00A27217 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E242ABA46CC00A27217 /* exercise.geojson */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +334,10 @@
 				EA419DE82ABA3D6400A27217 /* ViewController.swift in Sources */,
 				EA419DE42ABA3D6400A27217 /* AppDelegate.swift in Sources */,
 				EA419DE62ABA3D6400A27217 /* SceneDelegate.swift in Sources */,
+				EA419E162ABA3DCD00A27217 /* NetworkClient.swift in Sources */,
+				EA419E222ABA42F900A27217 /* WgerRouter.swift in Sources */,
+				EA419E1A2ABA405400A27217 /* NetworkUtils.swift in Sources */,
+				EA419E182ABA3E5E00A27217 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA419DFB2ABA3D6600A27217 /* GymondoTests.swift in Sources */,
+				EA419E1E2ABA414B00A27217 /* MockNetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -440,11 +518,14 @@
 				DEVELOPMENT_TEAM = C45V27EP8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gymondo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Gymondo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,11 +549,14 @@
 				DEVELOPMENT_TEAM = C45V27EP8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gymondo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Gymondo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
