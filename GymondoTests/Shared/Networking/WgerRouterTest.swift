@@ -10,13 +10,26 @@ import Combine
 @testable import Gymondo
 
 final class WgerRouterTest: XCTestCase {
+    private var mockNetworkClient: MockNetworkClient!
+    private var cancellables: Set<AnyCancellable> = []
+    private var wgerNetworkClient: WgerNetworkClient!
+    
+    override func setUp() {
+        super.setUp()
+
+    }
+    
+    override func tearDown() {
+        cancellables.forEach { $0.cancel() }
+        mockNetworkClient = nil
+        wgerNetworkClient = nil
+    }
 
     func testWgerNetworkProviderGetExercises() {
         let exp = expectation(description: "Parse the exercises")
-        var subscription = Set<AnyCancellable>()
         
-        let networkClient = TestUtils.mockNetworkClient(file: "exercise.json")
-        let wgerNetworkClient = WgerNetworkClient(networkClient: networkClient)
+        mockNetworkClient = TestUtils.mockNetworkClient(file: "exercise.json")
+        wgerNetworkClient = WgerNetworkClient(networkClient: mockNetworkClient)
         
         wgerNetworkClient.getExercises()
             .sink { _ in } receiveValue: { exercises in
@@ -29,7 +42,7 @@ final class WgerRouterTest: XCTestCase {
                 
                 exp.fulfill()
             }
-            .store(in: &subscription)
+            .store(in: &cancellables)
         
         wait(for: [exp], timeout: 0.5)
     }

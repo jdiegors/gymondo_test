@@ -35,6 +35,7 @@
 		EA419E512ABA989D00A27217 /* ImageNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E502ABA989D00A27217 /* ImageNetworkProvider.swift */; };
 		EA419E532ABA9DA100A27217 /* ExerciseCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E522ABA9DA100A27217 /* ExerciseCollectionViewModel.swift */; };
 		EA419E562ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E552ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift */; };
+		EA419E5D2ABAD16600A27217 /* ExerciseListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E5C2ABAD16600A27217 /* ExerciseListViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		EA419E502ABA989D00A27217 /* ImageNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworkProvider.swift; sourceTree = "<group>"; };
 		EA419E522ABA9DA100A27217 /* ExerciseCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewModel.swift; sourceTree = "<group>"; };
 		EA419E552ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewControllerConfigurator.swift; sourceTree = "<group>"; };
+		EA419E5C2ABAD16600A27217 /* ExerciseListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		EA419DF92ABA3D6600A27217 /* GymondoTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA419E572ABAC63B00A27217 /* Modules */,
 				EA419E252ABA495700A27217 /* Shared */,
 				EA419E1B2ABA413300A27217 /* CommonShared */,
 				EA419E232ABA466D00A27217 /* MockData */,
@@ -360,6 +363,30 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		EA419E572ABAC63B00A27217 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E582ABAC64100A27217 /* UIKit */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EA419E582ABAC64100A27217 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E592ABAC64B00A27217 /* Exercises */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		EA419E592ABAC64B00A27217 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E5C2ABAD16600A27217 /* ExerciseListViewModelTest.swift */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -520,6 +547,7 @@
 			files = (
 				EA419E2B2ABA4A8E00A27217 /* WgerRouterTest.swift in Sources */,
 				EA419E272ABA497700A27217 /* TestUtils.swift in Sources */,
+				EA419E5D2ABAD16600A27217 /* ExerciseListViewModelTest.swift in Sources */,
 				EA419E1E2ABA414B00A27217 /* MockNetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

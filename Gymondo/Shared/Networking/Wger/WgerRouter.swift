@@ -9,6 +9,7 @@ import Foundation
 
 enum WgerRouter: APIBuilder {
     case exercise
+    case exerciseDetail(id: String)
     
     var endpoint: String {
         "https://wger.de/api/v2"
@@ -18,6 +19,8 @@ enum WgerRouter: APIBuilder {
         switch self {
         case .exercise:
             return "exercisebaseinfo"
+        case .exerciseDetail(let id):
+            return "exercisebaseinfo/\(id)"
         }
     }
     
