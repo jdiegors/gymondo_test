@@ -20,8 +20,38 @@ class NetworkClient: NetworkProvider {
             .dataTaskPublisher(for: urlRequest)
             .receive(on: DispatchQueue.main)
             .mapError { _ in ApiError.unknown }
-            .flatMap { (data, response) -> AnyPublisher<Data, Never> in
-                return Just(data)
+            .flatMap { (data, response) -> AnyPublisher<Data, Error> in
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    return Fail(error: ApiError.unknown)
+                        .eraseToAnyPublisher()
+                }
+                
+                var errorType: ApiError
+                
+                switch httpResponse.statusCode {
+                case 200:
+                    return Just(data)
+                        .setFailureType(to: Error.self)
+                        .eraseToAnyPublisher()
+                case 404:
+                    errorType = .notFound
+                case 401:
+                    errorType = .unauthorized
+                case 403:
+                    errorType = .forbidden
+                case 500:
+                    errorType = .internalServerError
+                case 502:
+                    errorType = .badRequest
+                case 503:
+                    errorType = .serviceUnavailable
+                case 504:
+                    errorType = .gatewayTimeOut
+                default:
+                    errorType = .unknown
+                }
+                
+                return Fail(error: errorType)
                     .eraseToAnyPublisher()
             }
             .eraseToAnyPublisher()

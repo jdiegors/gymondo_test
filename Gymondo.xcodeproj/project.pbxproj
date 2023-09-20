@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EA419DE42ABA3D6400A27217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419DE32ABA3D6400A27217 /* AppDelegate.swift */; };
 		EA419DE62ABA3D6400A27217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419DE52ABA3D6400A27217 /* SceneDelegate.swift */; };
-		EA419DE82ABA3D6400A27217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419DE72ABA3D6400A27217 /* ViewController.swift */; };
 		EA419DED2ABA3D6600A27217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA419DEC2ABA3D6600A27217 /* Assets.xcassets */; };
 		EA419DF02ABA3D6600A27217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA419DEE2ABA3D6600A27217 /* LaunchScreen.storyboard */; };
 		EA419E052ABA3D6600A27217 /* GymondoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E042ABA3D6600A27217 /* GymondoUITests.swift */; };
@@ -28,6 +27,14 @@
 		EA419E362ABA5CF700A27217 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E352ABA5CF700A27217 /* BaseResponse.swift */; };
 		EA419E3A2ABA68AB00A27217 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E392ABA68AB00A27217 /* DateFormatter+Extensions.swift */; };
 		EA419E3C2ABA68DB00A27217 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E3B2ABA68DB00A27217 /* JSONDecoder+Extensions.swift */; };
+		EA419E412ABA710100A27217 /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E402ABA710100A27217 /* ExerciseListViewController.swift */; };
+		EA419E442ABA751900A27217 /* ExerciseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E432ABA751900A27217 /* ExerciseListViewModel.swift */; };
+		EA419E492ABA873E00A27217 /* ExerciseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E482ABA873E00A27217 /* ExerciseCollectionViewCell.swift */; };
+		EA419E4B2ABA954400A27217 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E4A2ABA954400A27217 /* UIImageView+Extensions.swift */; };
+		EA419E4F2ABA988800A27217 /* ImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E4E2ABA988800A27217 /* ImageRouter.swift */; };
+		EA419E512ABA989D00A27217 /* ImageNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E502ABA989D00A27217 /* ImageNetworkProvider.swift */; };
+		EA419E532ABA9DA100A27217 /* ExerciseCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E522ABA9DA100A27217 /* ExerciseCollectionViewModel.swift */; };
+		EA419E562ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E552ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +58,6 @@
 		EA419DE02ABA3D6400A27217 /* Gymondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gymondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA419DE32ABA3D6400A27217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA419DE52ABA3D6400A27217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA419DE72ABA3D6400A27217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA419DEC2ABA3D6600A27217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA419DEF2ABA3D6600A27217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA419DF12ABA3D6600A27217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +79,14 @@
 		EA419E352ABA5CF700A27217 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		EA419E392ABA68AB00A27217 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		EA419E3B2ABA68DB00A27217 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
+		EA419E402ABA710100A27217 /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
+		EA419E432ABA751900A27217 /* ExerciseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewModel.swift; sourceTree = "<group>"; };
+		EA419E482ABA873E00A27217 /* ExerciseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA419E4A2ABA954400A27217 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		EA419E4E2ABA988800A27217 /* ImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRouter.swift; sourceTree = "<group>"; };
+		EA419E502ABA989D00A27217 /* ImageNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworkProvider.swift; sourceTree = "<group>"; };
+		EA419E522ABA9DA100A27217 /* ExerciseCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewModel.swift; sourceTree = "<group>"; };
+		EA419E552ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewControllerConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,12 +137,14 @@
 		EA419DE22ABA3D6400A27217 /* Gymondo */ = {
 			isa = PBXGroup;
 			children = (
+				EA419E3D2ABA6F5000A27217 /* Modules */,
+				EA419E452ABA871400A27217 /* UI */,
 				EA419E2E2ABA4AF600A27217 /* Extensions */,
 				EA419E1F2ABA42D300A27217 /* Shared */,
+				EA419E542ABAA49200A27217 /* Helpers */,
 				EA419E132ABA3DA100A27217 /* CommonShared */,
 				EA419DE32ABA3D6400A27217 /* AppDelegate.swift */,
 				EA419DE52ABA3D6400A27217 /* SceneDelegate.swift */,
-				EA419DE72ABA3D6400A27217 /* ViewController.swift */,
 				EA419DEC2ABA3D6600A27217 /* Assets.xcassets */,
 				EA419DEE2ABA3D6600A27217 /* LaunchScreen.storyboard */,
 				EA419DF12ABA3D6600A27217 /* Info.plist */,
@@ -202,8 +218,8 @@
 		EA419E202ABA42EB00A27217 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				EA419E212ABA42F900A27217 /* WgerRouter.swift */,
-				EA419E2C2ABA4AEE00A27217 /* WgerNetworkProvider.swift */,
+				EA419E4D2ABA987B00A27217 /* Common */,
+				EA419E4C2ABA987000A27217 /* Wger */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -238,6 +254,7 @@
 				EA419E2F2ABA4B3F00A27217 /* AnyPublisher+Extensions.swift */,
 				EA419E392ABA68AB00A27217 /* DateFormatter+Extensions.swift */,
 				EA419E3B2ABA68DB00A27217 /* JSONDecoder+Extensions.swift */,
+				EA419E4A2ABA954400A27217 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,6 +274,90 @@
 				EA419E352ABA5CF700A27217 /* BaseResponse.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		EA419E3D2ABA6F5000A27217 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E3F2ABA6F5A00A27217 /* SwiftUI */,
+				EA419E3E2ABA6F5500A27217 /* UIKit */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EA419E3E2ABA6F5500A27217 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E422ABA714F00A27217 /* Exercises */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		EA419E3F2ABA6F5A00A27217 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		EA419E422ABA714F00A27217 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E402ABA710100A27217 /* ExerciseListViewController.swift */,
+				EA419E432ABA751900A27217 /* ExerciseListViewModel.swift */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		EA419E452ABA871400A27217 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E462ABA871B00A27217 /* UIKit */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EA419E462ABA871B00A27217 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E472ABA872200A27217 /* CollectionViewCells */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		EA419E472ABA872200A27217 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E482ABA873E00A27217 /* ExerciseCollectionViewCell.swift */,
+				EA419E522ABA9DA100A27217 /* ExerciseCollectionViewModel.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		EA419E4C2ABA987000A27217 /* Wger */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E212ABA42F900A27217 /* WgerRouter.swift */,
+				EA419E2C2ABA4AEE00A27217 /* WgerNetworkProvider.swift */,
+			);
+			path = Wger;
+			sourceTree = "<group>";
+		};
+		EA419E4D2ABA987B00A27217 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E4E2ABA988800A27217 /* ImageRouter.swift */,
+				EA419E502ABA989D00A27217 /* ImageNetworkProvider.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EA419E542ABAA49200A27217 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E552ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,18 +491,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA419DE82ABA3D6400A27217 /* ViewController.swift in Sources */,
 				EA419DE42ABA3D6400A27217 /* AppDelegate.swift in Sources */,
 				EA419DE62ABA3D6400A27217 /* SceneDelegate.swift in Sources */,
+				EA419E442ABA751900A27217 /* ExerciseListViewModel.swift in Sources */,
 				EA419E162ABA3DCD00A27217 /* NetworkClient.swift in Sources */,
 				EA419E222ABA42F900A27217 /* WgerRouter.swift in Sources */,
 				EA419E302ABA4B3F00A27217 /* AnyPublisher+Extensions.swift in Sources */,
+				EA419E492ABA873E00A27217 /* ExerciseCollectionViewCell.swift in Sources */,
 				EA419E1A2ABA405400A27217 /* NetworkUtils.swift in Sources */,
+				EA419E4F2ABA988800A27217 /* ImageRouter.swift in Sources */,
+				EA419E512ABA989D00A27217 /* ImageNetworkProvider.swift in Sources */,
 				EA419E3C2ABA68DB00A27217 /* JSONDecoder+Extensions.swift in Sources */,
 				EA419E332ABA4BF400A27217 /* Exercises.swift in Sources */,
 				EA419E2D2ABA4AEE00A27217 /* WgerNetworkProvider.swift in Sources */,
+				EA419E562ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift in Sources */,
+				EA419E532ABA9DA100A27217 /* ExerciseCollectionViewModel.swift in Sources */,
 				EA419E362ABA5CF700A27217 /* BaseResponse.swift in Sources */,
 				EA419E3A2ABA68AB00A27217 /* DateFormatter+Extensions.swift in Sources */,
+				EA419E412ABA710100A27217 /* ExerciseListViewController.swift in Sources */,
+				EA419E4B2ABA954400A27217 /* UIImageView+Extensions.swift in Sources */,
 				EA419E182ABA3E5E00A27217 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
