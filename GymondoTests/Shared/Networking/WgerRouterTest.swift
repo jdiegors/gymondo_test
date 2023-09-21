@@ -13,6 +13,7 @@ final class WgerRouterTest: XCTestCase {
     private var mockNetworkClient: MockNetworkClient!
     private var cancellables: Set<AnyCancellable> = []
     private var wgerNetworkClient: WgerNetworkClient!
+    private var expectation: XCTestExpectation!
     
     override func setUp() {
         super.setUp()
@@ -23,10 +24,11 @@ final class WgerRouterTest: XCTestCase {
         cancellables.forEach { $0.cancel() }
         mockNetworkClient = nil
         wgerNetworkClient = nil
+        expectation = nil
     }
 
-    func testWgerNetworkProviderGetExercises() {
-        let exp = expectation(description: "Parse the exercises")
+    func test_WgerNetworkProvider_GetExercises() {
+        expectation = expectation(description: "Parse the exercises")
         
         mockNetworkClient = TestUtils.mockNetworkClient(file: "exercise.json")
         wgerNetworkClient = WgerNetworkClient(networkClient: mockNetworkClient)
@@ -40,11 +42,52 @@ final class WgerRouterTest: XCTestCase {
                 XCTAssertGreaterThan(count ?? -1, 0)
                 XCTAssertGreaterThan(result ?? -1, 0)
                 
-                exp.fulfill()
+                self.expectation.fulfill()
             }
             .store(in: &cancellables)
         
-        wait(for: [exp], timeout: 0.5)
+        wait(for: [expectation], timeout: 0.5)
     }
+    
+    func test_WgerNetworkProvider_GetExercise_Detail() {
+        expectation = expectation(description: "Parse the exercise detail")
+        
+        mockNetworkClient = TestUtils.mockNetworkClient(file: "exercise_detail.json")
+        wgerNetworkClient = WgerNetworkClient(networkClient: mockNetworkClient)
+        
+        wgerNetworkClient.getDetails(exerciseId: 9)
+            .sink { _ in } receiveValue: { detail in
+                let exerciseId = detail.id
+                
+                XCTAssertEqual(exerciseId ?? 0, 9)
+                
+                self.expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        
+        wait(for: [expectation], timeout: 0.5)
+    }
+    
+    func test_WgerNetworkProvider_GetExercise_Variation() {
+        expectation = expectation(description: "Parse the exercise variation")
+        
+        mockNetworkClient = TestUtils.mockNetworkClient(file: "exercise_variation.json")
+        wgerNetworkClient = WgerNetworkClient(networkClient: mockNetworkClient)
+        
+        wgerNetworkClient.getVariations(variation: 47)
+            .sink { _ in } receiveValue: { variations in
+                let count = variations.count
+                let result = variations.results?.count
+                
+                XCTAssertNotNil(count)
+                XCTAssertGreaterThan(count ?? -1, 0)
+                XCTAssertGreaterThan(result ?? -1, 0)
+                
+                self.expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        
+        wait(for: [expectation], timeout: 0.5)
 
+    }
 }

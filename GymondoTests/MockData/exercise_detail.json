@@ -1,0 +1,59 @@
+{
+    "id": 9,
+    "uuid": "1b020b3a-3732-4c7e-92fd-a0cec90ed69b",
+    "created": "2023-08-06T10:17:17.422900+02:00",
+    "creation_date": "2023-08-06 08:17:17.422900+00:00",
+    "last_update": "2023-02-05T19:45:01.914781+01:00",
+    "last_update_global": "2023-02-05T19:45:01.914781+01:00",
+    "category": {
+        "id": 10,
+        "name": "Abs"
+    },
+    "muscles": [],
+    "muscles_secondary": [],
+    "equipment": [
+        {
+            "id": 10,
+            "name": "Kettlebell"
+        }
+    ],
+    "license": {
+        "id": 2,
+        "full_name": "Creative Commons Attribution Share Alike 4",
+        "short_name": "CC-BY-SA 4",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+    },
+    "license_author": "deusinvictus",
+    "images": [],
+    "exercises": [
+        {
+            "id": 345,
+            "uuid": "c788d643-150a-4ac7-97ef-84643c6419bf",
+            "name": "2 Handed Kettlebell Swing",
+            "exercise_base": 9,
+            "description": "<p>Two Handed Russian Style Kettlebell swing</p>",
+            "created": "2023-08-06T10:17:17.349574+02:00",
+            "creation_date": "2023-08-06 08:17:17.349574+00:00",
+            "language": 2,
+            "aliases": [],
+            "notes": [],
+            "license": 2,
+            "license_title": "",
+            "license_object_url": "",
+            "license_author": "deusinvictus",
+            "license_author_url": "",
+            "license_derivative_source_url": "",
+            "author_history": [
+                "deusinvictus"
+            ]
+        }
+    ],
+    "variations": 47,
+    "videos": [],
+    "author_history": [
+        "deusinvictus"
+    ],
+    "total_authors_history": [
+        "deusinvictus"
+    ]
+}

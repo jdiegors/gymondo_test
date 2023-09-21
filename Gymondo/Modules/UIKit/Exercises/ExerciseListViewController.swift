@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ExerciseListViewController: UIViewController, ExerciseListViewModelConsumer {
     private let viewModel: ExerciseListViewModel
@@ -67,5 +68,15 @@ extension ExerciseListViewController: UICollectionViewDataSource, UICollectionVi
         cell.images = data.images
         cell.exercises = data.exercises
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let data = viewModel.exercisesList[indexPath.row]
+        if let exerciseId = data.id,
+           let vm = viewModel.initializeExerciseDetails(exerciseId: exerciseId) {
+            let swiftUIView = ExerciseDetailsView(viewModel: vm)
+            let vc = UIHostingController(rootView: swiftUIView)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

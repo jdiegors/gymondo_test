@@ -17,20 +17,21 @@ protocol ExerciseListViewModel: AnyObject {
     
     func setViewModelConsumer(viewModelConsumer: ExerciseListViewModelConsumer?)
     func getExerciseCollectionViewModel() -> ExerciseCollectionViewModel
+    func initializeExerciseDetails(exerciseId: Int) -> ExerciseDetailsViewModelImpl?
 }
 
 class ExerciseListViewModelImpl: ExerciseListViewModel {
-    private let networkClient: WgerNetworkProvider
+    private let wgerNetworkClient: WgerNetworkProvider
     private let imageNetworkClient: ImageNetworkClient
     private var cancellable: Set<AnyCancellable>
     private weak var viewModelConsumer: ExerciseListViewModelConsumer?
     
     private(set) var exercisesList: Exercises = []
     
-    init(networkClient: WgerNetworkProvider,
+    init(wgerNetworkClient: WgerNetworkProvider,
          imageNetworkClient: ImageNetworkClient,
          cancellable: Set<AnyCancellable> = Set<AnyCancellable>()) {
-        self.networkClient = networkClient
+        self.wgerNetworkClient = wgerNetworkClient
         self.imageNetworkClient = imageNetworkClient
         self.cancellable = cancellable
         getExercises()
@@ -41,7 +42,7 @@ class ExerciseListViewModelImpl: ExerciseListViewModel {
     }
     
     func getExercises() {
-        networkClient
+        wgerNetworkClient
             .getExercises()
             .sink { result in
                 switch result {
@@ -61,7 +62,24 @@ class ExerciseListViewModelImpl: ExerciseListViewModel {
     }
     
     func getExerciseCollectionViewModel() -> ExerciseCollectionViewModel {
-        let vm: ExerciseCollectionViewModel = ExerciseCollectionViewModelImpl(networkClient: imageNetworkClient)
+        let vm: ExerciseCollectionViewModel = ExerciseCollectionViewModelImpl(imageNetworkClient: imageNetworkClient)
         return vm
+    }
+}
+
+extension ExerciseListViewModelImpl: ExerciseDetailsViewFactory {
+    func initializeExerciseDetails(exerciseId: Int) -> ExerciseDetailsViewModelImpl? {
+        let imageNetworkClient = ImageNetworkClient(networkClient: NetworkClient())
+        let wgerNetworkClient = WgerNetworkClient(networkClient: NetworkClient())
+        let vm: any ExerciseDetailsViewModel = ExerciseDetailsViewModelImpl(
+            exerciseId: exerciseId,
+            wgerNetworkClient: wgerNetworkClient,
+            imageNetworkClient: imageNetworkClient
+        )
+        
+        guard let viewmodel = vm as? ExerciseDetailsViewModelImpl else {
+            return nil
+        }
+        return viewmodel
     }
 }

@@ -34,7 +34,7 @@ extension CommonAppRootViewControllerConfigurator: AppRootViewControllerConfigur
         let networkClient = NetworkClient()
         let wgerNetworkClient = WgerNetworkClient(networkClient: networkClient)
         let imageNetworkClient = ImageNetworkClient(networkClient: networkClient)
-        let viewModel = ExerciseListViewModelImpl(networkClient: wgerNetworkClient, imageNetworkClient: imageNetworkClient)
+        let viewModel = ExerciseListViewModelImpl(wgerNetworkClient: wgerNetworkClient, imageNetworkClient: imageNetworkClient)
         let viewController = ExerciseListViewController(viewModel: viewModel)
         let navigationVC = UINavigationController()
         navigationVC.pushViewController(viewController, animated: false)

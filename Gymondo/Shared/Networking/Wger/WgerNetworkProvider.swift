@@ -10,6 +10,8 @@ import Combine
 
 protocol WgerNetworkProvider: AnyObject {
     func getExercises() -> AnyPublisher<ExercisesResponse, Error>
+    func getDetails(exerciseId: Int) -> AnyPublisher<ExercisesDetail, Error>
+    func getVariations(variation: Int) -> AnyPublisher<ExercisesVariationResponse, Error>
 }
 
 class WgerNetworkClient: WgerNetworkProvider {
@@ -21,5 +23,13 @@ class WgerNetworkClient: WgerNetworkProvider {
     
     func getExercises() -> AnyPublisher<ExercisesResponse, Error> {
         networkClient.request(from: WgerRouter.exercise).decode()
+    }
+    
+    func getDetails(exerciseId: Int) -> AnyPublisher<ExercisesDetail, Error> {
+        networkClient.request(from: WgerRouter.exerciseDetail(id: exerciseId)).decode()
+    }
+    
+    func getVariations(variation: Int) -> AnyPublisher<ExercisesVariationResponse, Error> {
+        networkClient.request(from: WgerRouter.exerciseVariation(variation: variation)).decode()
     }
 }

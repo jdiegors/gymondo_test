@@ -1,0 +1,171 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 9,
+      "uuid": "1b020b3a-3732-4c7e-92fd-a0cec90ed69b",
+      "created": "2023-08-06T10:17:17.422900+02:00",
+      "creation_date": "2023-08-06 08:17:17.422900+00:00",
+      "last_update": "2023-02-05T19:45:01.914781+01:00",
+      "last_update_global": "2023-02-05T19:45:01.914781+01:00",
+      "category": {
+        "id": 10,
+        "name": "Abs"
+      },
+      "muscles": [],
+      "muscles_secondary": [],
+      "equipment": [
+        {
+          "id": 10,
+          "name": "Kettlebell"
+        }
+      ],
+      "license": {
+        "id": 2,
+        "full_name": "Creative Commons Attribution Share Alike 4",
+        "short_name": "CC-BY-SA 4",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+      },
+      "license_author": "deusinvictus",
+      "images": [],
+      "exercises": [
+        {
+          "id": 345,
+          "uuid": "c788d643-150a-4ac7-97ef-84643c6419bf",
+          "name": "2 Handed Kettlebell Swing",
+          "exercise_base": 9,
+          "description": "<p>Two Handed Russian Style Kettlebell swing</p>",
+          "created": "2023-08-06T10:17:17.349574+02:00",
+          "creation_date": "2023-08-06 08:17:17.349574+00:00",
+          "language": 2,
+          "aliases": [],
+          "notes": [],
+          "license": 2,
+          "license_title": "",
+          "license_object_url": "",
+          "license_author": "deusinvictus",
+          "license_author_url": "",
+          "license_derivative_source_url": "",
+          "author_history": [
+            "deusinvictus"
+          ]
+        }
+      ],
+      "variations": 47,
+      "videos": [],
+      "author_history": [
+        "deusinvictus"
+      ],
+      "total_authors_history": [
+        "deusinvictus"
+      ]
+    },
+    {
+      "id": 331,
+      "uuid": "8b311259-4f67-4dbf-9574-8c38faa92160",
+      "created": "2023-08-06T10:17:17.422900+02:00",
+      "creation_date": "2023-08-06 08:17:17.422900+00:00",
+      "last_update": "2023-02-05T19:47:44.062895+01:00",
+      "last_update_global": "2023-02-11T18:18:04.893993+01:00",
+      "category": {
+        "id": 9,
+        "name": "Legs"
+      },
+      "muscles": [
+        {
+          "id": 8,
+          "name": "Gluteus maximus",
+          "name_en": "Glutes",
+          "is_front": false,
+          "image_url_main": "/static/images/muscles/main/muscle-8.svg",
+          "image_url_secondary": "/static/images/muscles/secondary/muscle-8.svg"
+        }
+      ],
+      "muscles_secondary": [
+        {
+          "id": 11,
+          "name": "Biceps femoris",
+          "name_en": "Hamstrings",
+          "is_front": false,
+          "image_url_main": "/static/images/muscles/main/muscle-11.svg",
+          "image_url_secondary": "/static/images/muscles/secondary/muscle-11.svg"
+        }
+      ],
+      "equipment": [
+        {
+          "id": 10,
+          "name": "Kettlebell"
+        }
+      ],
+      "license": {
+        "id": 1,
+        "full_name": " Creative Commons Attribution Share Alike 3",
+        "short_name": "CC-BY-SA 3",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+      },
+      "license_author": "J120290,cerin",
+      "images": [],
+      "exercises": [
+        {
+          "id": 249,
+          "uuid": "9d1b45e0-0689-411d-915b-5c5e3452e2b0",
+          "name": "Kettlebell Swings",
+          "exercise_base": 331,
+          "description": "<p>Hold the kettlebell securely in both hands. Keep your back flat throughout the move, avoiding any rounding of the spine.Keeping your knees \"soft\", hinge your hips backwards, letting the kettlebell swing between your knees.</p>\n<p>You want to bend from the hips as far as you can <em>without letting your back round forwards</em>. Then, snap your hips forwards quickly and standing up straight, locking your body in an upright posture.</p>\n<p>The speed you do this will cause your arms and the kettlebell to swing up in front of you. Don't try to <em>lift</em> the kettlebell with your arms. The snapping forwards of your hips will cause the kettlebell to swing forwards through momentum. Depending on the weight of the kettlebell and the speed of your hip movement, your arms will swing up to about shoulder height. At the top of this swing, let your hips hinge backwards again as the kettlebell swings back down to between your legs and the start of the next repetition.</p>",
+          "created": "2023-08-06T10:17:17.349574+02:00",
+          "creation_date": "2023-08-06 08:17:17.349574+00:00",
+          "language": 2,
+          "aliases": [],
+          "notes": [
+            {
+              "id": 121,
+              "exercise": 249,
+              "comment": "It's a swing from the hip, not a squat!"
+            }
+          ],
+          "license": 1,
+          "license_title": "",
+          "license_object_url": "",
+          "license_author": "J120290,cerin",
+          "license_author_url": "",
+          "license_derivative_source_url": "",
+          "author_history": [
+            "J120290,cerin"
+          ]
+        },
+        {
+          "id": 1971,
+          "uuid": "681080f6-1308-4839-b03d-9eb8a82c762c",
+          "name": "Kettlebell Swings",
+          "exercise_base": 331,
+          "description": "Tieni saldamente il kettlebell con entrambe le mani. Mantieni la schiena piatta per tutto il movimento, evitando qualsiasi arrotondamento della colonna vertebrale. Tenendo le ginocchia \"morbide\", inclina i fianchi all'indietro, lasciando che il kettlebell oscilli tra le ginocchia.\n\nVuoi piegarti dai fianchi il più possibile senza far girare la schiena in avanti. Quindi, fai scattare rapidamente i fianchi in avanti e alzati in piedi, bloccando il tuo corpo in una postura eretta.\n\nLa velocità con cui lo fai farà oscillare le tue braccia e il kettlebell davanti a te. Non cercare di sollevare il kettlebell con le braccia. Lo scatto in avanti dei fianchi farà oscillare il kettlebell in avanti attraverso lo slancio. A seconda del peso del kettlebell e della velocità del movimento dell'anca, le tue braccia oscilleranno all'incirca all'altezza delle spalle. Nella parte superiore di questo swing, lascia che i tuoi fianchi si pieghino di nuovo all'indietro mentre il kettlebell oscilla di nuovo tra le tue gambe e l'inizio della ripetizione successiva.",
+          "created": "2023-08-06T10:17:17.349574+02:00",
+          "creation_date": "2023-08-06 08:17:17.349574+00:00",
+          "language": 13,
+          "aliases": [],
+          "notes": [],
+          "license": 2,
+          "license_title": "",
+          "license_object_url": "",
+          "license_author": "clafal",
+          "license_author_url": "",
+          "license_derivative_source_url": "",
+          "author_history": [
+            "clafal"
+          ]
+        }
+      ],
+      "variations": 47,
+      "videos": [],
+      "author_history": [
+        "J120290,cerin"
+      ],
+      "total_authors_history": [
+        "clafal",
+        "J120290,cerin"
+      ]
+    }
+  ]
+}

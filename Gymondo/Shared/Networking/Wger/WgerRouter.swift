@@ -9,7 +9,8 @@ import Foundation
 
 enum WgerRouter: APIBuilder {
     case exercise
-    case exerciseDetail(id: String)
+    case exerciseDetail(id: Int)
+    case exerciseVariation(variation: Int)
     
     var endpoint: String {
         "https://wger.de/api/v2"
@@ -21,6 +22,8 @@ enum WgerRouter: APIBuilder {
             return "exercisebaseinfo"
         case .exerciseDetail(let id):
             return "exercisebaseinfo/\(id)"
+        case .exerciseVariation(let variation):
+            return "exercisebaseinfo/?variations=\(variation)"
         }
     }
     

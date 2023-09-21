@@ -1,23 +1,21 @@
 //
-//  Exersices.swift
+//  ExerciseVariation.swift
 //  Gymondo
 //
-//  Created by Juan Diego Rodriguez Steller on 19/9/23.
+//  Created by Juan Diego Rodriguez Steller on 20/9/23.
 //
 
 import Foundation
 
-typealias ExercisesResponse = BaseResponse<Exercises>
+typealias ExercisesVariationResponse = BaseResponse<ExercisesVariation>
 
-typealias Exercises = [Exercise]
+typealias ExercisesVariation = [ExerciseVariation]
 
-// MARK: - Exercise
-struct Exercise: Codable {
+// MARK: - ExerciseVariationElement
+struct ExerciseVariation: Codable {
     let id: Int?
-    let uuid: String?
-    let created: Date?
-    let creationDate: Date?
-    let lastUpdate, lastUpdateGlobal: String?
+    let uuid, created, creationDate, lastUpdate: String?
+    let lastUpdateGlobal: String?
     let category: Category?
     let muscles, musclesSecondary: [Muscle]?
     let equipment: [Category]?
@@ -27,8 +25,7 @@ struct Exercise: Codable {
     let exercises: [ExerciseElement]?
     let variations: Int?
     let videos: [Video]?
-    let authorHistory: [String]?
-    let totalAuthorsHistory: [String]?
+    let authorHistory, totalAuthorsHistory: [String]?
 
     enum CodingKeys: String, CodingKey {
         case id, uuid, created

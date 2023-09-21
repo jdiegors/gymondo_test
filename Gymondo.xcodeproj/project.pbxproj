@@ -36,6 +36,21 @@
 		EA419E532ABA9DA100A27217 /* ExerciseCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E522ABA9DA100A27217 /* ExerciseCollectionViewModel.swift */; };
 		EA419E562ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E552ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift */; };
 		EA419E5D2ABAD16600A27217 /* ExerciseListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E5C2ABAD16600A27217 /* ExerciseListViewModelTest.swift */; };
+		EA419E622ABB9C5800A27217 /* ExerciseDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E612ABB9C5800A27217 /* ExerciseDetailsViewModel.swift */; };
+		EA419E642ABB9CC800A27217 /* ExerciseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E632ABB9CC800A27217 /* ExerciseDetailsView.swift */; };
+		EA419E682ABBB17800A27217 /* exercise_detail.json in Resources */ = {isa = PBXBuildFile; fileRef = EA419E672ABBB17700A27217 /* exercise_detail.json */; };
+		EA419E6A2ABBB1DA00A27217 /* ExerciseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E692ABBB1DA00A27217 /* ExerciseDetail.swift */; };
+		EA419E6C2ABBB23100A27217 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E6B2ABBB23100A27217 /* Category.swift */; };
+		EA419E6E2ABBB24C00A27217 /* ExerciseElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E6D2ABBB24C00A27217 /* ExerciseElement.swift */; };
+		EA419E702ABBB25E00A27217 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E6F2ABBB25E00A27217 /* Image.swift */; };
+		EA419E722ABBB26D00A27217 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E712ABBB26D00A27217 /* Note.swift */; };
+		EA419E742ABBB27A00A27217 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E732ABBB27A00A27217 /* Alias.swift */; };
+		EA419E762ABBB28700A27217 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E752ABBB28700A27217 /* Muscle.swift */; };
+		EA419E782ABBB29500A27217 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E772ABBB29500A27217 /* Video.swift */; };
+		EA419E7A2ABBB2AA00A27217 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E792ABBB2AA00A27217 /* License.swift */; };
+		EA419E7C2ABBBA9700A27217 /* CommonExercisesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E7B2ABBBA9700A27217 /* CommonExercisesViewModel.swift */; };
+		EA419E7E2ABBBE3800A27217 /* exercise_variation.json in Resources */ = {isa = PBXBuildFile; fileRef = EA419E7D2ABBBE3700A27217 /* exercise_variation.json */; };
+		EA419E802ABBBE8C00A27217 /* ExerciseVariation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419E7F2ABBBE8C00A27217 /* ExerciseVariation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +104,21 @@
 		EA419E522ABA9DA100A27217 /* ExerciseCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCollectionViewModel.swift; sourceTree = "<group>"; };
 		EA419E552ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootViewControllerConfigurator.swift; sourceTree = "<group>"; };
 		EA419E5C2ABAD16600A27217 /* ExerciseListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewModelTest.swift; sourceTree = "<group>"; };
+		EA419E612ABB9C5800A27217 /* ExerciseDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsViewModel.swift; sourceTree = "<group>"; };
+		EA419E632ABB9CC800A27217 /* ExerciseDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsView.swift; sourceTree = "<group>"; };
+		EA419E672ABBB17700A27217 /* exercise_detail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exercise_detail.json; sourceTree = "<group>"; };
+		EA419E692ABBB1DA00A27217 /* ExerciseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetail.swift; sourceTree = "<group>"; };
+		EA419E6B2ABBB23100A27217 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EA419E6D2ABBB24C00A27217 /* ExerciseElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseElement.swift; sourceTree = "<group>"; };
+		EA419E6F2ABBB25E00A27217 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		EA419E712ABBB26D00A27217 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		EA419E732ABBB27A00A27217 /* Alias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
+		EA419E752ABBB28700A27217 /* Muscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
+		EA419E772ABBB29500A27217 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		EA419E792ABBB2AA00A27217 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		EA419E7B2ABBBA9700A27217 /* CommonExercisesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExercisesViewModel.swift; sourceTree = "<group>"; };
+		EA419E7D2ABBBE3700A27217 /* exercise_variation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exercise_variation.json; sourceTree = "<group>"; };
+		EA419E7F2ABBBE8C00A27217 /* ExerciseVariation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVariation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				EA419E3D2ABA6F5000A27217 /* Modules */,
-				EA419E452ABA871400A27217 /* UI */,
 				EA419E2E2ABA4AF600A27217 /* Extensions */,
 				EA419E1F2ABA42D300A27217 /* Shared */,
 				EA419E542ABAA49200A27217 /* Helpers */,
@@ -230,6 +259,8 @@
 		EA419E232ABA466D00A27217 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
+				EA419E7D2ABBBE3700A27217 /* exercise_variation.json */,
+				EA419E672ABBB17700A27217 /* exercise_detail.json */,
 				EA419E242ABA46CC00A27217 /* exercise.json */,
 			);
 			path = MockData;
@@ -267,6 +298,16 @@
 			children = (
 				EA419E342ABA5CE800A27217 /* Shared */,
 				EA419E322ABA4BF400A27217 /* Exercises.swift */,
+				EA419E692ABBB1DA00A27217 /* ExerciseDetail.swift */,
+				EA419E7F2ABBBE8C00A27217 /* ExerciseVariation.swift */,
+				EA419E6B2ABBB23100A27217 /* Category.swift */,
+				EA419E6D2ABBB24C00A27217 /* ExerciseElement.swift */,
+				EA419E6F2ABBB25E00A27217 /* Image.swift */,
+				EA419E712ABBB26D00A27217 /* Note.swift */,
+				EA419E732ABBB27A00A27217 /* Alias.swift */,
+				EA419E752ABBB28700A27217 /* Muscle.swift */,
+				EA419E772ABBB29500A27217 /* Video.swift */,
+				EA419E792ABBB2AA00A27217 /* License.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,8 +323,10 @@
 		EA419E3D2ABA6F5000A27217 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EA419E452ABA871400A27217 /* UI */,
 				EA419E3F2ABA6F5A00A27217 /* SwiftUI */,
 				EA419E3E2ABA6F5500A27217 /* UIKit */,
+				EA419E7B2ABBBA9700A27217 /* CommonExercisesViewModel.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -299,6 +342,7 @@
 		EA419E3F2ABA6F5A00A27217 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				EA419E602ABB9C3800A27217 /* Exercise */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -306,8 +350,8 @@
 		EA419E422ABA714F00A27217 /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
-				EA419E402ABA710100A27217 /* ExerciseListViewController.swift */,
 				EA419E432ABA751900A27217 /* ExerciseListViewModel.swift */,
+				EA419E402ABA710100A27217 /* ExerciseListViewController.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -385,6 +429,15 @@
 				EA419E5C2ABAD16600A27217 /* ExerciseListViewModelTest.swift */,
 			);
 			path = Exercises;
+			sourceTree = "<group>";
+		};
+		EA419E602ABB9C3800A27217 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				EA419E612ABB9C5800A27217 /* ExerciseDetailsViewModel.swift */,
+				EA419E632ABB9CC800A27217 /* ExerciseDetailsView.swift */,
+			);
+			path = Exercise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +553,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA419E7E2ABBBE3800A27217 /* exercise_variation.json in Resources */,
+				EA419E682ABBB17800A27217 /* exercise_detail.json in Resources */,
 				EA419E282ABA4A4000A27217 /* exercise.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,25 +574,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA419DE42ABA3D6400A27217 /* AppDelegate.swift in Sources */,
+				EA419E702ABBB25E00A27217 /* Image.swift in Sources */,
+				EA419E742ABBB27A00A27217 /* Alias.swift in Sources */,
 				EA419DE62ABA3D6400A27217 /* SceneDelegate.swift in Sources */,
+				EA419E6A2ABBB1DA00A27217 /* ExerciseDetail.swift in Sources */,
 				EA419E442ABA751900A27217 /* ExerciseListViewModel.swift in Sources */,
 				EA419E162ABA3DCD00A27217 /* NetworkClient.swift in Sources */,
 				EA419E222ABA42F900A27217 /* WgerRouter.swift in Sources */,
 				EA419E302ABA4B3F00A27217 /* AnyPublisher+Extensions.swift in Sources */,
 				EA419E492ABA873E00A27217 /* ExerciseCollectionViewCell.swift in Sources */,
+				EA419E642ABB9CC800A27217 /* ExerciseDetailsView.swift in Sources */,
+				EA419E7A2ABBB2AA00A27217 /* License.swift in Sources */,
 				EA419E1A2ABA405400A27217 /* NetworkUtils.swift in Sources */,
+				EA419E622ABB9C5800A27217 /* ExerciseDetailsViewModel.swift in Sources */,
 				EA419E4F2ABA988800A27217 /* ImageRouter.swift in Sources */,
 				EA419E512ABA989D00A27217 /* ImageNetworkProvider.swift in Sources */,
 				EA419E3C2ABA68DB00A27217 /* JSONDecoder+Extensions.swift in Sources */,
+				EA419E782ABBB29500A27217 /* Video.swift in Sources */,
 				EA419E332ABA4BF400A27217 /* Exercises.swift in Sources */,
 				EA419E2D2ABA4AEE00A27217 /* WgerNetworkProvider.swift in Sources */,
+				EA419E762ABBB28700A27217 /* Muscle.swift in Sources */,
+				EA419E6E2ABBB24C00A27217 /* ExerciseElement.swift in Sources */,
+				EA419E6C2ABBB23100A27217 /* Category.swift in Sources */,
+				EA419E802ABBBE8C00A27217 /* ExerciseVariation.swift in Sources */,
 				EA419E562ABAA4B300A27217 /* AppRootViewControllerConfigurator.swift in Sources */,
 				EA419E532ABA9DA100A27217 /* ExerciseCollectionViewModel.swift in Sources */,
 				EA419E362ABA5CF700A27217 /* BaseResponse.swift in Sources */,
+				EA419E722ABBB26D00A27217 /* Note.swift in Sources */,
 				EA419E3A2ABA68AB00A27217 /* DateFormatter+Extensions.swift in Sources */,
 				EA419E412ABA710100A27217 /* ExerciseListViewController.swift in Sources */,
 				EA419E4B2ABA954400A27217 /* UIImageView+Extensions.swift in Sources */,
 				EA419E182ABA3E5E00A27217 /* NetworkProvider.swift in Sources */,
+				EA419E7C2ABBBA9700A27217 /* CommonExercisesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
