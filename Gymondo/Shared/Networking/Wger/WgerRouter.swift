@@ -21,7 +21,7 @@ enum WgerRouter: APIBuilder {
         case .exercise:
             return "exercisebaseinfo"
         case .exerciseDetail(let id):
-            return "exercisebaseinfo/\(id)"
+            return "exercisebaseinfos/\(id)"
         case .exerciseVariation(let variation):
             return "exercisebaseinfo/?variations=\(variation)"
         }

@@ -11,7 +11,7 @@ import Combine
 
 protocol ExerciseCollectionViewModel: AnyObject {
     func getImage(images: [ImageModel]?, completion: @escaping (UIImage) -> Void)
-    func getName(exercises: [ExerciseElement]?, completion: @escaping (String) -> Void)
+    func getName(exercises: [ExerciseElement]?) -> String
 }
 
 class ExerciseCollectionViewModelImpl: ExerciseCollectionViewModel {
@@ -43,8 +43,8 @@ class ExerciseCollectionViewModelImpl: ExerciseCollectionViewModel {
         })
     }
     
-    func getName(exercises: [ExerciseElement]?, completion: @escaping (String) -> Void) {
+    func getName(exercises: [ExerciseElement]?) -> String {
         let data = commonExercises.getExerciseData(exercises: exercises)
-        completion(data.name)
+        return data.name
     }
 }

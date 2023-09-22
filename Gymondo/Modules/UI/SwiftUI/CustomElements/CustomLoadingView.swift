@@ -19,7 +19,6 @@ struct CustomLoadingView: ViewModifier {
         get { isLoading }
         set { isLoading = newValue }
     }
-
     
     func body(content: Content) -> some View {
         ZStack {
@@ -39,6 +38,7 @@ struct CustomLoadingView: ViewModifier {
                 }
             } else {
                 content
+                    .padding(.all)
             }
         }
     }

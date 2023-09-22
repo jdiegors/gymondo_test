@@ -12,6 +12,7 @@ import UIKit
 protocol CommonExercisesViewModel: AnyObject {
     func getExerciseData(exercises: [ExerciseElement]?) -> (id: Int, name: String, description: String)
     func getImage(path: String?, completion: @escaping (Result<UIImage, Error>) -> Void)
+    func showError(error: Error, completion: @escaping () -> Void)
 }
 
 class CommonExercisesViewModelImpl: CommonExercisesViewModel {
@@ -45,5 +46,15 @@ class CommonExercisesViewModelImpl: CommonExercisesViewModel {
                 completion(.success(image))
             }
             .store(in: &cancellable)
+    }
+    
+    func showError(error: Error, completion: @escaping () -> Void) {
+        if let error = error as? ApiError {
+            Messages.shared.showAlert(title: "Error", message: "An error of type '\(error.description)' occurs", completion: {
+                completion()
+            })
+        } else {
+            Messages.shared.showAlert(title: "Error", message: "An unknown error occur", completion: {})
+        }
     }
 }

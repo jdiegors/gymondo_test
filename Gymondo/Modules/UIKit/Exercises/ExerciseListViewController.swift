@@ -8,8 +8,15 @@
 import UIKit
 import SwiftUI
 
-class ExerciseListViewController: UIViewController, ExerciseListViewModelConsumer {
-    private let viewModel: ExerciseListViewModel
+protocol ExerciseListViewControllerProtocol {
+    var viewModel: ExerciseListViewModel { get }
+    
+    func setupCollectionView()
+    func updateCollectionView()
+}
+
+class ExerciseListViewController: UIViewController, ExerciseListViewControllerProtocol, ExerciseListViewModelConsumer {
+    private(set) var viewModel: ExerciseListViewModel
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -31,11 +38,11 @@ class ExerciseListViewController: UIViewController, ExerciseListViewModelConsume
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        setupCollectionView()
         self.title = "Exercises"
     }
     
-    func setupTableView() {
+    func setupCollectionView() {
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -49,7 +56,7 @@ class ExerciseListViewController: UIViewController, ExerciseListViewModelConsume
         collectionView.delegate = self
     }
     
-    func updateTableView() {
+    func updateCollectionView() {
         collectionView.reloadData()
     }
 }

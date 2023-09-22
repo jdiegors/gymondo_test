@@ -15,12 +15,12 @@ final class WgerRouterTest: XCTestCase {
     private var wgerNetworkClient: WgerNetworkClient!
     private var expectation: XCTestExpectation!
     
-    override func setUp() {
+    override func setUpWithError() throws {
         super.setUp()
-
+        expectation = expectation(description: "Parse the exercises")
     }
     
-    override func tearDown() {
+    override func tearDownWithError() throws {
         cancellables.forEach { $0.cancel() }
         mockNetworkClient = nil
         wgerNetworkClient = nil
@@ -28,8 +28,6 @@ final class WgerRouterTest: XCTestCase {
     }
 
     func test_WgerNetworkProvider_GetExercises() {
-        expectation = expectation(description: "Parse the exercises")
-        
         mockNetworkClient = TestUtils.mockNetworkClient(file: "exercise.json")
         wgerNetworkClient = WgerNetworkClient(networkClient: mockNetworkClient)
         
@@ -49,9 +47,7 @@ final class WgerRouterTest: XCTestCase {
         wait(for: [expectation], timeout: 0.5)
     }
     
-    func test_WgerNetworkProvider_GetExercise_Detail() {
-        expectation = expectation(description: "Parse the exercise detail")
-        
+    func test_WgerNetworkProvider_GetExerciseDetail() {
         mockNetworkClient = TestUtils.mockNetworkClient(file: "exercise_detail.json")
         wgerNetworkClient = WgerNetworkClient(networkClient: mockNetworkClient)
         
@@ -68,9 +64,7 @@ final class WgerRouterTest: XCTestCase {
         wait(for: [expectation], timeout: 0.5)
     }
     
-    func test_WgerNetworkProvider_GetExercise_Variation() {
-        expectation = expectation(description: "Parse the exercise variation")
-        
+    func test_WgerNetworkProvider_GetExerciseVariation() {
         mockNetworkClient = TestUtils.mockNetworkClient(file: "exercise_variation.json")
         wgerNetworkClient = WgerNetworkClient(networkClient: mockNetworkClient)
         
@@ -88,6 +82,5 @@ final class WgerRouterTest: XCTestCase {
             .store(in: &cancellables)
         
         wait(for: [expectation], timeout: 0.5)
-
     }
 }

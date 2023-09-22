@@ -88,12 +88,15 @@ class ExerciseDetailsViewModelImpl: ExerciseDetailsViewModel {
             .getDetails(exerciseId: exerciseId)
             .sink { [weak self] result in
                 guard let self = self else { return }
+                self.isLoading = false
                 switch result {
                 case .finished:
-                    self.isLoading = false
-                case .failure(let error):
-                    print(error)
                     break
+                case .failure(let error):
+                    commonExercises.showError(error: error) {
+                        self.isLoading = true
+                        self.getDetails()
+                    }
                 }
             } receiveValue: { [weak self] details in
                 guard let self = self else { return }

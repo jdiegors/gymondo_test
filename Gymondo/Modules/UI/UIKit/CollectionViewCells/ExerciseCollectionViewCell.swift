@@ -24,7 +24,6 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
         return lbl
     }()
     
-    
     var images: [ImageModel]? {
         didSet {
             viewModel?.getImage(images: images, completion: { [weak self] img in
@@ -36,10 +35,7 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
     
     var exercises: [ExerciseElement]? {
         didSet {
-            viewModel?.getName(exercises: exercises, completion: { [weak self] exerciseName in
-                guard let self = self else { return }
-                self.name.text = exerciseName
-            })
+            self.name.text = viewModel?.getName(exercises: exercises)
         }
     }
     
@@ -49,10 +45,10 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         self.image.image = UIImage(named: "default-placeholder")
         self.images = nil
-        self.name = UILabel()
-        super.prepareForReuse()
+        self.name.text = ""
     }
     
     override init(frame: CGRect) {
