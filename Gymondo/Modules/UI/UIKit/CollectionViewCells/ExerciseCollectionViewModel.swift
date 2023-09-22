@@ -10,7 +10,7 @@ import UIKit
 import Combine
 
 protocol ExerciseCollectionViewModel: AnyObject {
-    func getImage(images: [Image]?, completion: @escaping (UIImage) -> Void)
+    func getImage(images: [ImageModel]?, completion: @escaping (UIImage) -> Void)
     func getName(exercises: [ExerciseElement]?, completion: @escaping (String) -> Void)
 }
 
@@ -27,7 +27,7 @@ class ExerciseCollectionViewModelImpl: ExerciseCollectionViewModel {
         self.commonExercises = CommonExercisesViewModelImpl(imageNetworkClient: self.imageNetworkClient)
     }
     
-    func getImage(images: [Image]?, completion: @escaping (UIImage) -> Void) {
+    func getImage(images: [ImageModel]?, completion: @escaping (UIImage) -> Void) {
         images?.forEach({ img in
             if img.isMain ?? false {
                 commonExercises
@@ -44,8 +44,7 @@ class ExerciseCollectionViewModelImpl: ExerciseCollectionViewModel {
     }
     
     func getName(exercises: [ExerciseElement]?, completion: @escaping (String) -> Void) {
-        commonExercises.getNameAndDescription(exercises: exercises) { name, _ in
-            completion(name)
-        }
+        let data = commonExercises.getExerciseData(exercises: exercises)
+        completion(data.name)
     }
 }

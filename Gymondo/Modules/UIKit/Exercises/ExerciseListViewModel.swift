@@ -14,10 +14,10 @@ protocol ExerciseListViewModelConsumer: AnyObject {
 
 protocol ExerciseListViewModel: AnyObject {
     var exercisesList: Exercises { get }
+    var coordinator: MainCoordinator { get }
     
     func setViewModelConsumer(viewModelConsumer: ExerciseListViewModelConsumer?)
     func getExerciseCollectionViewModel() -> ExerciseCollectionViewModel
-    func initializeExerciseDetails(exerciseId: Int) -> ExerciseDetailsViewModelImpl?
 }
 
 class ExerciseListViewModelImpl: ExerciseListViewModel {
@@ -26,14 +26,17 @@ class ExerciseListViewModelImpl: ExerciseListViewModel {
     private var cancellable: Set<AnyCancellable>
     private weak var viewModelConsumer: ExerciseListViewModelConsumer?
     
+    private(set) var coordinator: MainCoordinator
     private(set) var exercisesList: Exercises = []
     
     init(wgerNetworkClient: WgerNetworkProvider,
          imageNetworkClient: ImageNetworkClient,
-         cancellable: Set<AnyCancellable> = Set<AnyCancellable>()) {
+         cancellable: Set<AnyCancellable> = Set<AnyCancellable>(),
+         coordinator: MainCoordinator) {
         self.wgerNetworkClient = wgerNetworkClient
         self.imageNetworkClient = imageNetworkClient
         self.cancellable = cancellable
+        self.coordinator = coordinator
         getExercises()
     }
     
@@ -64,22 +67,5 @@ class ExerciseListViewModelImpl: ExerciseListViewModel {
     func getExerciseCollectionViewModel() -> ExerciseCollectionViewModel {
         let vm: ExerciseCollectionViewModel = ExerciseCollectionViewModelImpl(imageNetworkClient: imageNetworkClient)
         return vm
-    }
-}
-
-extension ExerciseListViewModelImpl: ExerciseDetailsViewFactory {
-    func initializeExerciseDetails(exerciseId: Int) -> ExerciseDetailsViewModelImpl? {
-        let imageNetworkClient = ImageNetworkClient(networkClient: NetworkClient())
-        let wgerNetworkClient = WgerNetworkClient(networkClient: NetworkClient())
-        let vm: any ExerciseDetailsViewModel = ExerciseDetailsViewModelImpl(
-            exerciseId: exerciseId,
-            wgerNetworkClient: wgerNetworkClient,
-            imageNetworkClient: imageNetworkClient
-        )
-        
-        guard let viewmodel = vm as? ExerciseDetailsViewModelImpl else {
-            return nil
-        }
-        return viewmodel
     }
 }

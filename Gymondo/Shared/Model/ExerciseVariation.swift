@@ -21,7 +21,7 @@ struct ExerciseVariation: Codable {
     let equipment: [Category]?
     let license: License?
     let licenseAuthor: String?
-    let images: [Image]?
+    let images: [ImageModel]?
     let exercises: [ExerciseElement]?
     let variations: Int?
     let videos: [Video]?

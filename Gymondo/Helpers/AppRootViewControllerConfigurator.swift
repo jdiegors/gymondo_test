@@ -31,13 +31,11 @@ public struct CommonAppRootViewControllerConfigurator {
 
 extension CommonAppRootViewControllerConfigurator: AppRootViewControllerConfigurator {
     public func getRootViewController() -> UIViewController {
-        let networkClient = NetworkClient()
-        let wgerNetworkClient = WgerNetworkClient(networkClient: networkClient)
-        let imageNetworkClient = ImageNetworkClient(networkClient: networkClient)
-        let viewModel = ExerciseListViewModelImpl(wgerNetworkClient: wgerNetworkClient, imageNetworkClient: imageNetworkClient)
-        let viewController = ExerciseListViewController(viewModel: viewModel)
         let navigationVC = UINavigationController()
-        navigationVC.pushViewController(viewController, animated: false)
+        var coordinator: MainCoordinator?
+        coordinator = MainCoordinator(navigationController: navigationVC)
+        coordinator?.start()
+        
         return navigationVC
     }
 }

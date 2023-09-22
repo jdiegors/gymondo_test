@@ -10,7 +10,7 @@ import Combine
 import UIKit
 
 protocol CommonExercisesViewModel: AnyObject {
-    func getNameAndDescription(exercises: [ExerciseElement]?, completion: @escaping (String, String) -> Void)
+    func getExerciseData(exercises: [ExerciseElement]?) -> (id: Int, name: String, description: String)
     func getImage(path: String?, completion: @escaping (Result<UIImage, Error>) -> Void)
 }
 
@@ -24,14 +24,18 @@ class CommonExercisesViewModelImpl: CommonExercisesViewModel {
         self.cancellable = cancellable
     }
     
-    func getNameAndDescription(exercises: [ExerciseElement]?, completion: @escaping (String, String) -> Void) {
-        exercises?.forEach({ exercise in
-            if exercises?.count == 1 {
-                completion(exercise.name ?? "Not found", exercise.description ?? "")
-            } else if exercise.language == 2 {
-                completion(exercise.name ?? "Not found", exercise.description ?? "")
+    func getExerciseData(exercises: [ExerciseElement]?) -> (id: Int, name: String, description: String) {
+        if let exercises = exercises {
+            for exercise in exercises {
+                if exercises.count == 1 {
+                    return (exercise.id ?? 0, exercise.name ?? "Not found", exercise.description ?? "")
+                } else if exercise.language == 2 {
+                    return (exercise.id ?? 0, exercise.name ?? "Not found", exercise.description ?? "")
+                }
             }
-        })
+        }
+        
+        return (0, "","")
     }
     
     func getImage(path: String?, completion: @escaping (Result<UIImage, Error>) -> Void) {

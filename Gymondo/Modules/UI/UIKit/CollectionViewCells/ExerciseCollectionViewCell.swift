@@ -25,7 +25,7 @@ class ExerciseCollectionViewCell: UICollectionViewCell {
     }()
     
     
-    var images: [Image]? {
+    var images: [ImageModel]? {
         didSet {
             viewModel?.getImage(images: images, completion: { [weak self] img in
                 guard let self = self else { return }

@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Image
-struct Image: Codable {
+struct ImageModel: Codable {
     let id: Int?
     let uuid: String?
     let exerciseBase: Int?
