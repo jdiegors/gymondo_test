@@ -44,6 +44,7 @@ class MainCoordinator: Coordinator {
         
         if let viewmodel = vm as? ExerciseDetailsViewModelImpl {
             let swiftUIView = ExerciseDetailsView(viewModel: viewmodel)
+                .accessibilityIdentifier("exerciseDetails")
             let vc = UIHostingController(rootView: swiftUIView)
             navigationController.pushViewController(vc, animated: true)
         }

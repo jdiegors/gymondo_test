@@ -34,7 +34,7 @@ struct ExerciseDetailsView<T>: View where T: ExerciseDetailsViewModel {
                 
                 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
+                    LazyHStack {
                         ForEach(viewModel.images, id: \.uuid) { img in
                             CustomImage(imageURL: viewModel.getImageUrl(image: img))
                         }
@@ -54,7 +54,7 @@ struct ExerciseDetailsView<T>: View where T: ExerciseDetailsViewModel {
                     
                     Group {
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
+                            LazyHStack {
                                 ForEach(viewModel.exerciseVariations, id: \.uuid) { variation in
                                     let variationExercise = viewModel.getExerciseData(exercises: variation.exercises)
                                     Variation(name: variationExercise.name,
@@ -67,6 +67,7 @@ struct ExerciseDetailsView<T>: View where T: ExerciseDetailsViewModel {
                             }
                         }
                         .padding(.top)
+                        .accessibilityIdentifier("variations")
                     }
                 }
             }

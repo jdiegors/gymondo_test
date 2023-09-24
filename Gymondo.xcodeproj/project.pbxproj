@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA3DD5EB2ABFF08C00FBEFE2 /* Displaying .swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3DD5EA2ABFF08C00FBEFE2 /* Displaying .swift */; };
 		EA419DE42ABA3D6400A27217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419DE32ABA3D6400A27217 /* AppDelegate.swift */; };
 		EA419DE62ABA3D6400A27217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA419DE52ABA3D6400A27217 /* SceneDelegate.swift */; };
 		EA419DED2ABA3D6600A27217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA419DEC2ABA3D6600A27217 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA3DD5EA2ABFF08C00FBEFE2 /* Displaying .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Displaying .swift"; sourceTree = "<group>"; };
 		EA419DE02ABA3D6400A27217 /* Gymondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gymondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA419DE32ABA3D6400A27217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA419DE52ABA3D6400A27217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA3DD5E82ABFEFF000FBEFE2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EA3DD5EA2ABFF08C00FBEFE2 /* Displaying .swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		EA419DD72ABA3D6400A27217 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		EA419E032ABA3D6600A27217 /* GymondoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				EA3DD5E82ABFEFF000FBEFE2 /* Shared */,
 				EA419E042ABA3D6600A27217 /* GymondoUITests.swift */,
 				EA419E062ABA3D6600A27217 /* GymondoUITestsLaunchTests.swift */,
 			);
@@ -738,6 +749,7 @@
 			files = (
 				EA419E072ABA3D6600A27217 /* GymondoUITestsLaunchTests.swift in Sources */,
 				EA419E052ABA3D6600A27217 /* GymondoUITests.swift in Sources */,
+				EA3DD5EB2ABFF08C00FBEFE2 /* Displaying .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

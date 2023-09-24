@@ -40,6 +40,7 @@ class ExerciseListViewController: UIViewController, ExerciseListViewControllerPr
         super.viewDidLoad()
         setupCollectionView()
         self.title = "Exercises"
+        view.accessibilityIdentifier = "exerciseList"
     }
     
     func setupCollectionView() {
